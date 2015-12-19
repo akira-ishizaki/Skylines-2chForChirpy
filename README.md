@@ -1,6 +1,8 @@
 # 2ch for Chirpy
 Lets tweety chirp about the newest 2cannel (Japan's most popular online community) posts.  
-This mod is based on 'Reddit for Chirpy'.  
-Â‚¢’¹‚ª2ch‚ÌSkylinesŠÖ˜AƒXƒŒ‚Ì“Še‚ğ‚Â‚Ô‚â‚­‚æ‚¤‚É‚È‚éMOD‚Å‚·B
-NGƒ[ƒh‹@”\AAA”»’è‚µ‚Ä”ñ•\¦‚É‚·‚é‹@”\‚ ‚èB”ÂˆÚ“]‚É‚à‘Î‰B
-‚¿‚È‚İ‚Éƒf[ƒ^æ“¾‚Í2ch.sc‚©‚çs‚Á‚Ä‚¢‚Ü‚·B
+é’ã„é³¥ãŒ2chã®Skylinesé–¢é€£ã‚¹ãƒ¬ã®æŠ•ç¨¿ã‚’ã¤ã¶ã‚„ãã‚ˆã†ã«ãªã‚‹MODã§ã™ã€‚
+NGãƒ¯ãƒ¼ãƒ‰æ©Ÿèƒ½ã€AAåˆ¤å®šã—ã¦éè¡¨ç¤ºã«ã™ã‚‹æ©Ÿèƒ½ã‚ã‚Šã€‚æ¿ç§»è»¢ã«ã‚‚å¯¾å¿œã€‚
+ã¡ãªã¿ã«ãƒ‡ãƒ¼ã‚¿å–å¾—ã¯2ch.scã‹ã‚‰è¡Œã£ã¦ã„ã¾ã™ã€‚
+##
+This software includes ãƒªãƒ³ã‚¯ã®ãƒ†ã‚­ã‚¹ãƒˆ
+This mod is based on [Reddit for Chirpy][https://steamcommunity.com/sharedfiles/filedetails/?id=408705348] which is licensed under [MIT License][https://github.com/mabako/reddit-for-city-skylines/blob/master/LICENSE].  
