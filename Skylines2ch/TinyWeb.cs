@@ -111,8 +111,7 @@ namespace Client2ch
                 Stream st = response.GetResponseStream();
                 string subjectListTxt = Utility.ToUnicode(Utility.ReadBinaryData(st));
                 st.Close();
-
-                // <A HREF=http://anago.2ch.sc/game/>PCゲーム</A><br>
+                
                 Regex r = new Regex(@"(?<thread_num>\d*)\.dat\<\>(?<title>.*Skylines.*)\s\(\d*\)", RegexOptions.IgnoreCase);
                 MatchCollection mc = r.Matches(subjectListTxt);
                 foreach (Match m in mc)
