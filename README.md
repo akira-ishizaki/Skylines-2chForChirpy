@@ -5,4 +5,4 @@ NGワード機能、AA判定して非表示にする機能あり。板移転に�
 ちなみにデータ取得は2ch.scから行っています。  
 
 ## Acknowledgments
-This mod is based on [Reddit for Chirpy][https://steamcommunity.com/sharedfiles/filedetails/?id=408705348] which is licensed under [MIT License][https://github.com/mabako/reddit-for-city-skylines/blob/master/LICENSE].  
+This mod is based on [Reddit for Chirpy](https://steamcommunity.com/sharedfiles/filedetails/?id=408705348) which is licensed under [MIT License](https://github.com/mabako/reddit-for-city-skylines/blob/master/LICENSE).  
