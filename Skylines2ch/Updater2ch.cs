@@ -18,7 +18,10 @@ namespace Client2ch
         private Timer timer = new Timer();
         private Dictionary<Thread2ch, int> lastResNums = new Dictionary<Thread2ch, int>();
 
-        private string boardURL = @"http://anago.2ch.sc/game/";
+        private string boardURL_sc = @"http://anago.2ch.sc/game/";
+        private string boardURL_net = @"http://potato.2ch.net/game/";
+        private const string BBSMENU_URL_SC = @"http://2ch.sc/bbsmenu.html";
+        private const string BBSMENU_URL_NET = @"http://menu.2ch.net/bbsmenu.html";
         private bool webexceptionFlag = false;
 
         private CitizenMessage lastCitizenMessage = null;
@@ -82,12 +85,13 @@ namespace Client2ch
 
                 if (webexceptionFlag)
                 {
-                    boardURL = TinyWeb.getBoardURL();
+                    boardURL_sc = TinyWeb.getBoardURL(BBSMENU_URL_SC);
                 }
 
                 if (lastResNums == null || lastResNums.Count == 0 || (DateTime.Now - lastsubjectsupdatetime).TotalHours >= 1 || webexceptionFlag)
                 {
-                    List<Thread2ch> subjectList = TinyWeb.GetSubjects(boardURL);
+                    boardURL_net = TinyWeb.getBoardURL(BBSMENU_URL_NET);
+                    List<Thread2ch> subjectList = TinyWeb.GetSubjects(boardURL_sc);
                     foreach (Thread2ch thread2ch in subjectList)
                     {
                         if (!lastResNums.ContainsKey(thread2ch))
@@ -110,7 +114,7 @@ namespace Client2ch
                 Thread2ch thread = Enumerable.ToList(lastResNums.Keys)[new System.Random().Next(lastResNums.Count)];
                 int lastResNum = lastResNums[thread];
 
-                IEnumerable<Post> newestPosts = TinyWeb.FindLastPosts(boardURL + "dat/" + thread.thread_num + ".dat");
+                IEnumerable<Post> newestPosts = TinyWeb.FindLastPosts(boardURL_sc + "dat/" + thread.thread_num + ".dat");
                 foreach (Post newestPost in newestPosts)
                 {
                     if (lastResNum < newestPost.res_num && !ShouldFilterPost(thread.title, newestPost))
@@ -181,7 +185,7 @@ namespace Client2ch
         {
             if (!string.IsNullOrEmpty(component.stringUserData) && UIMouseButtonExtensions.IsFlagSet(eventParam.buttons, UIMouseButton.Left))
             {
-                string url = boardURL.Replace(@".2ch.sc/", @".2ch.net/test/read.cgi/") + component.stringUserData;
+                string url = boardURL_net.Replace(@".2ch.net/", @".2ch.net/test/read.cgi/") + component.stringUserData;
 
                 switch (ModInfo.ModConf.ClickBehaviourIndex)
                 {

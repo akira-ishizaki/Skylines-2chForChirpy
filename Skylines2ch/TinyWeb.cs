@@ -75,9 +75,9 @@ namespace Client2ch
             }
         }
 
-        public static string getBoardURL()
+        public static string getBoardURL(string bbsmenuURL)
         {
-            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("http://2ch.sc/bbsmenu.html");
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(bbsmenuURL);
             request.Timeout = 20000;
             request.Method = WebRequestMethods.Http.Get;
 
